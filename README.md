@@ -2,7 +2,7 @@
 ## Team Name: TinyTrackers 
 ## Team Leader:
 - Name: Benisa Zito
-- GitHub:beni-16
+- GitHub:bzito23
 ## Team Members:
 1. Fiona Ramadani - GitHub: framadani23 - Email: framadani23@epoka.edu.al
 2. Simona Gjalmi - GitHub: sgjalmi23 - Email: sgjalmi23@epoka.edu.al
