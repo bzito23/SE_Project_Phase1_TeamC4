@@ -1,69 +1,181 @@
 1. Chosen Development Model
-State the chosen development model (e.g., Agile, Waterfall).
-Justification: Briefly explain why this model was selected (e.g., flexibility, adaptability,
-structure).
+Agile 
+Justification:
+The system requires continuous updates and improvements (e.g., new features like notifications, tracking).
+Requirements may evolve based on parent and daycare feedback.
+Agile allows incremental delivery, meaning features like login, tracking, and notifications can be built step-by-step.
+It supports flexibility and adaptability, which is essential for a user-centered system.
 
 2. User Requirements
 a. Stakeholders (WHO is involved)
-• Identify key stakeholders (end-users, clients, developers, etc.)
-• Briefly describe their roles and interests in the project.
+
+| Stakeholder        | Role         | Interest                                          |
+| ------------------ | ------------ | ------------------------------------------------- |
+| Parents            | End-users    | Monitor child activities, ensure safety           |
+| Daycare Staff      | System users | Update child information (meals, sleep, behavior) |
+| Daycare Admin      | Manager      | Manage users, monitor system usage                |
+| Developers         | Builders     | Develop and maintain the system                   |
+| Security Personnel | Safety       | Ensure secure child pickup                        |
+
 b. User Stories (WHAT they need and WHY)
-• Provide several detailed user stories
-• Include the user type (e.g., admin, user)
-• Clearly describe the requirement and its benefit
-Example: As a customer, I want to book tickets online so that I can avoid waiting in line.
+
+1. As a parent, I want to receive real-time updates so that I know my child is safe.
+2. As a parent, I want to see photos of my child so that I feel reassured.
+3. As a parent, I want notifications when my child is picked up so that I am informed instantly.
+4. As a parent, I want a safe-word system so that only authorized people can pick up my child.
+5. As a staff member, I want to log meals so that parents know what their child has eaten.
+6. As a staff member, I want to record sleep times so that parents can track rest patterns.
+7. As a staff member, I want to log behavior notes so that parents stay informed.
+8. As an admin, I want to manage users so that the system stays organized.
+9. As an admin, I want to assign children to parents so that data is correctly linked.
+10. As a parent, I want to access history reports so that I can review my child’s daily activities.
 
 3. Functional Requirements (what the system must do)
 a. Description
-Write simple and clear descriptions of what the system must do.
-Example: The system should allow users to register and log in.
-b. Acceptance Criteria (When we know it WORKS correctly)
-Create a checklist for each feature describing when it is considered complete.
-Example: User Login
-Acceptance Criteria:
--User enters valid email and password
--System verifies credentials
 
--User is redirected to dashboard after login
--Error message is shown for invalid login
+1. The system should allow user registration.
+2. The system should allow secure login.
+3. The system should allow parents to view child profiles.
+4. The system should allow staff to update child activities.
+5. The system should record meal information.
+6. The system should record sleep schedules.
+7. The system should record behavior updates.
+8. The system should upload and display photos.
+9. The system should send real-time notifications.
+10. The system should notify parents when a child is picked up.
+11. The system should implement a safe-word verification system.
+12. The system should allow admin to manage users.
+13. The system should allow role-based access control.
+14. The system should allow parents to view activity history.
+15. The system should allow editing of child data.
+16. The system should allow staff to mark attendance.
+17. The system should track check-in/check-out times.
+18. The system should allow multiple children per parent.
+19. The system should allow report generation.
+20. The system should support push notifications.
+21. The system should log all activities.
+22. The system should allow password reset.
+23. The system should allow authorized pickup person registration.
+24. The system should verify safe-word before child release.
+25. The system should send alerts for unusual behavior.
+
+b. Acceptance Criteria (When we know it WORKS correctly)
+1. User Login
+- User enters valid credentials
+- System verifies credentials
+- User is redirected to dashboard
+- Error shown for invalid login
+2. Activity Update
+- Staff selects child
+- Staff inputs activity (meal/sleep/behavior)
+- System saves data
+- Parents receive notification
+3. Photo Upload
+- Staff uploads image
+- Image is stored in database
+- Parents can view image
+- Image loads successfully
+4. Pickup Notification
+- Child is marked as picked up
+- System sends notification to parent
+- Parent receives alert instantly
+5. Safe Word Verification
+- Pickup person enters safe word
+- System validates safe word
+- Access granted if correct
+-Access denied if incorrect
 
 4. Non-Functional Requirements (How well the system should work)
 a. Description
-Describe how well the system should perform (e.g., speed, usability, reliability).
-Example: The system should load quickly.
+1. The system should load quickly.
+2. The system should be user-friendly.
+3. The system should be available 24/7.
+4. The system should be secure.
+5. The system should encrypt sensitive data.
+6. The system should handle multiple users simultaneously.
+7. The system should have minimal downtime.
+8. The system should be scalable.
+9. The system should provide real-time updates.
+10. The system should be responsive (mobile-friendly).
+11. The system should ensure data accuracy.
+12. The system should maintain data integrity.
+13. The system should support backup and recovery.
+14. The system should log errors.
+15. The system should be compatible with major browsers.
+16. The system should have fast notification delivery.
+17. The system should protect against unauthorized access.
+18. The system should ensure privacy of user data.
+19. The system should be easy to maintain.
+20. The system should provide clear UI navigation.
+21. The system should support future upgrades.
+22. The system should handle high traffic loads.
+23. The system should provide audit logs.
+24. The system should minimize crashes.
+
 b. Acceptance Criteria
 Define measurable goals for each requirement (e.g., response time, usability standards).
-Example: Speed
-Acceptance Criteria:
--Pages load in less than 2 seconds.
--Booking process completes in under 5 seconds.
+1. Performance (Speed)
+- Pages load in under 2 seconds
+-Notifications delivered within 3 seconds
+2. Security
+- Passwords are encrypted
+- Unauthorized users cannot access data
+-Safe-word is securely stored
+3. Availability
+- System uptime is at least 99%
+- System recovers quickly after failure
+4. Usability
+- Users can navigate easily
+- Actions require minimal clicks
+-Interface is intuitive
+5. Scalability
+- System supports increasing number of users
+- Performance does not degrade under load
 
 5. Application Specifications (How the system is built technically)
 a. Architecture
-Provide an overview of the system architecture, including components and interactions.
-Example:
-The system follows a three-tier architecture consisting of a frontend (user interface),
-backend (business logic), and database. The frontend sends requests to the backend, which
-processes data and communicates with the database.
+The system follows a three-tier architecture:
+Frontend: User interface (parents, staff, admin)
+Backend: Handles logic, authentication, notifications
+Database: Stores user data, child records, activities
+Flow:
+Frontend → Backend → Database → Backend → Frontend
 b. Database Model
-Describe the database structure: tables, relationships, and constraints.
-Example:
-The database includes tables such as Users, Movies, and Bookings. Each booking is linked to
-a user and a movie. The email field in the Users table is unique, and all bookings must
-reference a valid user.
+-Tables
+Users (id, name, email, password, role)
+Children (id, name, age, parent_id)
+Activities (id, child_id, type, description, timestamp)
+Photos (id, child_id, image_url)
+Pickups (id, child_id, time, safe_word)
+AuthorizedPersons (id, child_id, name, safe_word)
+-Relationships
+One parent → many children
+One child → many activities
+Each pickup → linked to a child
+-Constraints
+Email must be unique
+Safe word required for pickup
+Foreign keys must be valid
 c. Technologies Used
 List technologies, and languages used, including reasons for selection.
-Example: The system is developed using Python for backend development due to its
-simplicity and scalability. The frontend uses HTML, CSS, and JavaScript for a responsive
-interface. MySQL is used as the database for efficient data management.
+Backend: Python (Django) → easy, scalable, secure
+Frontend: HTML, CSS, JavaScript → responsive UI
+Database: MySQL / PostgreSQL → reliable data storage
 d. User Interface Design
-Provide wireframes, mockups, or descriptions of the user interface.
-
-Example: The interface includes a login page, a movie browsing page, and a booking page.
-The design is simple and user-friendly, with clear navigation and buttons for key actions
-such as booking and payment.
+-Main Pages
+Login/Register Page
+Parent Dashboard (activities, photos, notifications)
+Staff Dashboard (update activities)
+Admin Panel (manage users)
+-Design Features
+Simple and clean layout
+Easy navigation
+Buttons for quick actions
+Mobile-friendly design
 e. Security Measures
-Describe security measures such as authentication, encryption, and data protection.
-Example: The system uses user authentication with secure login credentials. Passwords are
-encrypted before storage. Role-based access control ensures that only admins can manage
-system data.
+- User authentication (login system)
+- Password encryption (hashed passwords)
+- Role-based access control (admin, staff, parent)
+- Safe-word verification for pickups
+- Secure data transmission (HTTPS)
+- Data privacy protection
