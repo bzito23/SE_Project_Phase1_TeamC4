@@ -1,0 +1,69 @@
+1. Chosen Development Model
+State the chosen development model (e.g., Agile, Waterfall).
+Justification: Briefly explain why this model was selected (e.g., flexibility, adaptability,
+structure).
+
+2. User Requirements
+a. Stakeholders (WHO is involved)
+• Identify key stakeholders (end-users, clients, developers, etc.)
+• Briefly describe their roles and interests in the project.
+b. User Stories (WHAT they need and WHY)
+• Provide several detailed user stories
+• Include the user type (e.g., admin, user)
+• Clearly describe the requirement and its benefit
+Example: As a customer, I want to book tickets online so that I can avoid waiting in line.
+
+3. Functional Requirements (what the system must do)
+a. Description
+Write simple and clear descriptions of what the system must do.
+Example: The system should allow users to register and log in.
+b. Acceptance Criteria (When we know it WORKS correctly)
+Create a checklist for each feature describing when it is considered complete.
+Example: User Login
+Acceptance Criteria:
+-User enters valid email and password
+-System verifies credentials
+
+-User is redirected to dashboard after login
+-Error message is shown for invalid login
+
+4. Non-Functional Requirements (How well the system should work)
+a. Description
+Describe how well the system should perform (e.g., speed, usability, reliability).
+Example: The system should load quickly.
+b. Acceptance Criteria
+Define measurable goals for each requirement (e.g., response time, usability standards).
+Example: Speed
+Acceptance Criteria:
+-Pages load in less than 2 seconds.
+-Booking process completes in under 5 seconds.
+
+5. Application Specifications (How the system is built technically)
+a. Architecture
+Provide an overview of the system architecture, including components and interactions.
+Example:
+The system follows a three-tier architecture consisting of a frontend (user interface),
+backend (business logic), and database. The frontend sends requests to the backend, which
+processes data and communicates with the database.
+b. Database Model
+Describe the database structure: tables, relationships, and constraints.
+Example:
+The database includes tables such as Users, Movies, and Bookings. Each booking is linked to
+a user and a movie. The email field in the Users table is unique, and all bookings must
+reference a valid user.
+c. Technologies Used
+List technologies, and languages used, including reasons for selection.
+Example: The system is developed using Python for backend development due to its
+simplicity and scalability. The frontend uses HTML, CSS, and JavaScript for a responsive
+interface. MySQL is used as the database for efficient data management.
+d. User Interface Design
+Provide wireframes, mockups, or descriptions of the user interface.
+
+Example: The interface includes a login page, a movie browsing page, and a booking page.
+The design is simple and user-friendly, with clear navigation and buttons for key actions
+such as booking and payment.
+e. Security Measures
+Describe security measures such as authentication, encryption, and data protection.
+Example: The system uses user authentication with secure login credentials. Passwords are
+encrypted before storage. Role-based access control ensures that only admins can manage
+system data.
