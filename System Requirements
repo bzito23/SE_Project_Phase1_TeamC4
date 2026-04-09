@@ -143,9 +143,12 @@ Frontend → Backend → Database → Backend → Frontend
 b. Database Model
 -Tables
 Users (id, name, email, password, role)
+Parent(id, name, email, phone, password)
+Staff(id, name, email, phone, role, password)
 Children (id, name, age, parent_id)
 Activities (id, child_id, type, description, timestamp)
 Photos (id, child_id, image_url)
+Registartion(child_name, age, parent_name, timestamp, email, phone)
 Pickups (id, child_id, time, safe_word)
 AuthorizedPersons (id, child_id, name, safe_word)
 -Relationships
